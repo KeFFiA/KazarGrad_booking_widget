@@ -1,147 +1,149 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/KeFFiA/KazarGrad_booking_widget@refs/heads/master/css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/KeFFiA/KazarGrad_booking_widget@refs/heads/master/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+    <title>widget</title>
 <body>
 <div class="booking-widget" id="booking-widget">
-  <div class="booking-module_wrapper">
-    <div class="booking-module_datepick module-control-glacb">
-      <div class="click-outside">
-        <div class="input-module_wrapper-2q9rr">
-          <label class="input-module_label-1p3o1">
-            <div class="input-module_controlline-2dq2p">
-              <div class="datepicker" id="datepicker_wrapper">
-                <input class="check-in input-module_control-tqfen datepicker" id="datepicker"
-                       placeholder="Когда">
-                <span class="input-button" id="cross">
+    <div class="booking-module_wrapper">
+        <div class="booking-module_datepick module-control-glacb">
+            <div class="click-outside">
+                <div class="input-module_wrapper-2q9rr">
+                    <label class="input-module_label-1p3o1">
+                        <div class="input-module_controlline-2dq2p">
+                            <div class="datepicker" id="datepicker_wrapper">
+                                <input class="check-in input-module_control-tqfen datepicker" id="datepicker"
+                                       placeholder="Когда">
+                                <span class="input-button" id="cross">
                         <img src="https://img.icons8.com/material-outlined/24/delete-sign.png" alt="Очистить"
                              class="datepick-module_icon"/>
                       </span>
-              </div>
+                            </div>
+                        </div>
+                        <div class="input-module_titleWrapper-2jssx">
+                            <div class="input-module_title-svj1h input-module_title-checkinout">Заезд 14:00 - выезд
+                                12:00
+                            </div>
+                        </div>
+                    </label>
+                </div>
             </div>
-            <div class="input-module_titleWrapper-2jssx">
-              <div class="input-module_title-svj1h input-module_title-checkinout">Заезд 14:00 - выезд
-                12:00
-              </div>
-            </div>
-          </label>
         </div>
-      </div>
-    </div>
-    <div class="booking-module_guests module-control-glacb" id="guest-selector">
-      <div class="click-outside">
-        <div class="input-module_wrapper-2q9rr">
-          <label class="input-module_label-1p3o1">
-            <div class="input-module_controlline-2dq2p">
-              <div class="input-module_control-tqfen" role="textbox" id="guest-field">2 гостей
-              </div>
-              <div tabindex="0" role="button" class="input-module_icon-j1n8u" id="guest_arrow-down">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
-                     class="Guests-module__arrowDown--1jS3N">
-                  <path fill-rule="nonzero"
-                        d="M10.908 14.623l6.139-6.14c.5-.499.5-1.315 0-1.815l-.172-.174a1.29 1.29 0 0 0-1.817 0L10 11.553l-5.06-5.06a1.288 1.288 0 0 0-1.814 0l-.173.175c-.5.5-.5 1.316 0 1.816l6.14 6.139a1.288 1.288 0 0 0 1.815 0">
-                  </path>
-                </svg>
-              </div>
+        <div class="booking-module_guests module-control-glacb" id="guest-selector">
+            <div class="click-outside">
+                <div class="input-module_wrapper-2q9rr">
+                    <label class="input-module_label-1p3o1">
+                        <div class="input-module_controlline-2dq2p">
+                            <div class="input-module_control-tqfen" role="textbox" id="guest-field">2 гостей
+                            </div>
+                            <div tabindex="0" role="button" class="input-module_icon-j1n8u" id="guest_arrow-down">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+                                     class="Guests-module__arrowDown--1jS3N">
+                                    <path fill-rule="nonzero"
+                                          d="M10.908 14.623l6.139-6.14c.5-.499.5-1.315 0-1.815l-.172-.174a1.29 1.29 0 0 0-1.817 0L10 11.553l-5.06-5.06a1.288 1.288 0 0 0-1.814 0l-.173.175c-.5.5-.5 1.316 0 1.816l6.14 6.139a1.288 1.288 0 0 0 1.815 0">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input-module_titleWrapper-2jssx">
+                            <div class="input-module_title-svj1h">1 домик для</div>
+                        </div>
+                    </label>
+                    <div id="guest-popup" class="hidden">
+                        <div class="guest-popup-content">
+                            <div class="guest-item">
+                                <span>Взрослые:</span>
+                                <button id="decrease-adult" class="guest-popup_buttons">-</button>
+                                <span id="adult-count">2</span>
+                                <button id="increase-adult" class="guest-popup_buttons">+</button>
+                            </div>
+                            <div class="guest-item" id="guest-item">
+                                <span>Дети:</span>
+                                <button id="add-child" class="add-child guest-popup_buttons">Добавить ребёнка</button>
+                            </div>
+                            <div id="child-list"></div>
+                            <div class="guest-popup_buttons-wrapper">
+                                <button class="cancel_button guest-button guest-popup_buttons" id="cancel_button">
+                                    Отмена
+                                </button>
+                                <button class="done-button guest-button guest-popup_buttons" id="done-button">Готово
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="input-module_titleWrapper-2jssx">
-              <div class="input-module_title-svj1h">1 домик для</div>
-            </div>
-          </label>
-          <div id="guest-popup" class="hidden">
-            <div class="guest-popup-content">
-              <div class="guest-item">
-                <span>Взрослые:</span>
-                <button id="decrease-adult" class="guest-popup_buttons">-</button>
-                <span id="adult-count">2</span>
-                <button id="increase-adult" class="guest-popup_buttons">+</button>
-              </div>
-              <div class="guest-item" id="guest-item">
-                <span>Дети:</span>
-                <button id="add-child" class="add-child guest-popup_buttons">Добавить ребёнка</button>
-              </div>
-              <div id="child-list"></div>
-              <div class="guest-popup_buttons-wrapper">
-                <button class="cancel_button guest-button guest-popup_buttons" id="cancel_button">
-                  Отмена
-                </button>
-                <button class="done-button guest-button guest-popup_buttons" id="done-button">Готово
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="extra-module_buttons">
-      <div class="extra-module_booktype">
-        <div class="radiogroup-module" id="radiogroup-module">
-          <label class="inputradio-module_label radiogroup-module_container-qqjqz">
-            <div class="inputradio-module_container-23qtz">
-              <input type="radio" name="bookingtype"
-                     class="inputradio-module_input-60s40 inputradio-module_icon-crpv0_checked"
-                     value="house" checked>
-              <span class="inputradio-module_icon-crpv0"></span>
-              <span class="inputradio-module_text-1avj1">
+        <div class="extra-module_buttons">
+            <div class="extra-module_booktype">
+                <div class="radiogroup-module" id="radiogroup-module">
+                    <label class="inputradio-module_label radiogroup-module_container-qqjqz">
+                        <div class="inputradio-module_container-23qtz">
+                            <input type="radio" name="bookingtype"
+                                   class="inputradio-module_input-60s40 inputradio-module_icon-crpv0_checked"
+                                   value="house" checked>
+                            <span class="inputradio-module_icon-crpv0"></span>
+                            <span class="inputradio-module_text-1avj1">
                   <span>Домик</span>
                 </span>
-            </div>
-          </label>
-          <label class="inputradio-module_label radiogroup-module_container-qqjqz">
-            <div class="inputradio-module_container-23qtz">
-              <input type="radio" name="bookingtype"
-                     class="inputradio-module_input-60s40 inputradio-module_icon-crpv0_checked"
-                     value="banquet">
-              <span class="inputradio-module_icon-crpv0"></span>
-              <span class="inputradio-module_text-1avj1">
+                        </div>
+                    </label>
+                    <label class="inputradio-module_label radiogroup-module_container-qqjqz">
+                        <div class="inputradio-module_container-23qtz">
+                            <input type="radio" name="bookingtype"
+                                   class="inputradio-module_input-60s40 inputradio-module_icon-crpv0_checked"
+                                   value="banquet">
+                            <span class="inputradio-module_icon-crpv0"></span>
+                            <span class="inputradio-module_text-1avj1">
                   <span>Банкетный домик</span>
                 </span>
+                        </div>
+                    </label>
+                </div>
             </div>
-          </label>
         </div>
-      </div>
+        <div class="booking-module_submit" id="booking-module_submit">
+            <button class="button-module_button button" tabindex="0" id="booking-module_submit_button">
+                <div class="button-module_content">Забронируй свой отдых прямо сейчас!</div>
+            </button>
+        </div>
     </div>
-    <div class="booking-module_submit" id="booking-module_submit">
-      <button class="button-module_button button" tabindex="0" id="booking-module_submit_button">
-        <div class="button-module_content">Забронируй свой отдых прямо сейчас!</div>
-      </button>
+    <div class="popup_widget" id="popup_widget">
+        <button class="close-button" id="close-popup">×</button>
+        <div class="popup-module_wrapper">
+            <div class="form-group">
+                <label for="check-in_2">Дата заезда</label>
+                <input type="text" id="check-in_2" disabled>
+            </div>
+            <div class="form-group">
+                <label for="check-out_2">Дата выезда</label>
+                <input type="text" id="check-out_2" disabled>
+            </div>
+            <div class="form-group">
+                <label for="guest-count">1 домик для</label>
+                <input type="text" id="guest-count" disabled>
+            </div>
+            <div class="form-group">
+                <label for="contact-name">ФИО</label>
+                <input type="text" id="contact-name" class="contact" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-email">Электронная почта</label>
+                <input type="email" id="contact-email" class="contact" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-phone">Телефон</label>
+                <input type="tel" id="contact-phone" class="contact" maxlength="16" placeholder="+7" required>
+            </div>
+        </div>
+        <div class="button-wrapper">
+            <button type="submit" class="button-module_button" id="submit_form">Отправить заявку</button>
+        </div>
     </div>
-  </div>
-  <div class="popup_widget" id="popup_widget">
-    <button class="close-button" id="close-popup">×</button>
-    <div class="popup-module_wrapper">
-      <div class="form-group">
-        <label for="check-in_2">Дата заезда</label>
-        <input type="text" id="check-in_2" disabled>
-      </div>
-      <div class="form-group">
-        <label for="check-out_2">Дата выезда</label>
-        <input type="text" id="check-out_2" disabled>
-      </div>
-      <div class="form-group">
-        <label for="guest-count">1 домик для</label>
-        <input type="text" id="guest-count" disabled>
-      </div>
-      <div class="form-group">
-        <label for="contact-name">ФИО</label>
-        <input type="text" id="contact-name" class="contact" required>
-      </div>
-      <div class="form-group">
-        <label for="contact-email">Электронная почта</label>
-        <input type="email" id="contact-email" class="contact" required>
-      </div>
-      <div class="form-group">
-        <label for="contact-phone">Телефон</label>
-        <input type="tel" id="contact-phone" class="contact" maxlength="16" placeholder="+7" required>
-      </div>
-    </div>
-    <div class="button-wrapper">
-      <button type="submit" class="button-module_button" id="submit_form">Отправить заявку</button>
-    </div>
-  </div>
 </div>
 <script src="https://cdn.jsdelivr.net/gh/KeFFiA/KazarGrad_booking_widget@refs/heads/master/js/app.js"></script>
 </body>
