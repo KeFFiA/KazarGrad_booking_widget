@@ -1,557 +1,561 @@
+body {
+    background: none;
+}
+
 .booking-widget {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-start-start-radius: 4px;
-            box-sizing: border-box;
-            line-height: 0;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 8px 24px 0 gray;
-            padding: 10px;
-            width: 90vw;
-            height: auto;
-            max-width: 900px;
-            z-index: 1;
-        }
-
-        .module-control-glacb {
-            margin: 10px;
-            flex-grow: 1;
-        }
-
-        .booking-module_wrapper {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: auto auto auto;
-            flex-wrap: wrap;
-            z-index: 1;
-        }
-
-        .booking-module_datepick {
-            grid-area: 1 / 1 / 1 / 3;
-            z-index: 1;
-        }
-
-        .click-outside {
-            display: block;
-            unicode-bidi: isolate;
-            cursor: pointer;
-        }
-
-        .input-module_wrapper-2q9rr {
-            inline-size: 100%;
-            display: inline-flex;
-            flex-direction: column;
-        }
-
-        .input-module_label-1p3o1 {
-            padding: 3px 11px 5px;
-            block-size: 48px;
-            box-sizing: border-box;
-            display: inline-flex;
-            flex-direction: column-reverse;
-            overflow: visible;
-            position: relative;
-            transition: border-color 0.16s ease, box-shadow 0.16s ease;
-            background-color: white;
-            border: 1px solid #e60181;
-            border-radius: 4px;
-        }
-
-        .input-module_controlline-2dq2p, .datepicker {
-            align-items: center;
-            display: flex;
-            flex-grow: 1;
-            justify-content: space-between;
-        }
-
-        .input-module_control-tqfen {
-            background-color: transparent;
-            border: none;
-            color: black;
-            font-size: 14px;
-            -webkit-font-smoothing: antialiased;
-            font-weight: 500;
-            inline-size: 100%;
-            line-height: 20px;
-            outline: 0;
-            overflow: hidden;
-            position: relative;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            cursor: pointer;
-            z-index: 1;
-        }
-
-        .input-module_icon-j1n8u, .input-button {
-            pointer-events: auto;
-            display: none;
-            cursor: pointer;
-            transform: translateY(-4px);
-        }
-
-        .check-in:focus ~ .input-button,
-        .check-in:not(:placeholder-shown) ~ .input-button {
-            display: block;
-        }
-
-        .input-button img {
-            height: 18px;
-            width: 18px;
-            padding-right: 1px;
-        }
-
-        .input-module_titleWrapper-2jssx {
-            align-items: center;
-            display: inline-flex;
-            max-inline-size: 100%;
-        }
-
-        .input-module_title-svj1h {
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 16px;
-            margin-block-end: 2px;
-            color: #e60181;
-            overflow: hidden;
-            position: relative;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .input-module_title-checkinout {
-            font-size: 12px;
-            font-weight: 500;
-            line-height: 16px;
-            margin-block-end: 2px;
-            top: 2px;
-            color: #e60181;
-            overflow: hidden;
-            position: relative;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .booking-module_guests {
-            position: relative;
-            grid-area: 1 / 3 / 2 / 5;
-        }
-
-        .input-module_wrapper-2q9rr {
-            display: inline-flex;
-            flex-direction: column;
-            inline-size: 100%;
-            cursor: pointer;
-        }
-
-        .input-module_controlline-2dq2p {
-            align-items: center;
-            display: flex;
-            flex-grow: 1;
-            justify-content: space-between;
-            cursor: pointer;
-        }
-
-        .input-module_icon-j1n8u {
-            display: flex;
-            pointer-events: none;
-        }
-
-        .Guests-module__arrowDown--1jS3N, .datepick-module_icon {
-            opacity: 0.6;
-        }
-
-        .booking-module_submit {
-            grid-area: 3 / 1 / 4 / 5;
-            margin: 10px;
-            order: 1;
-        }
-
-        .button-module_button {
-            margin-right: 10px;
-            padding: 0 16px;
-            border: 1px solid transparent;
-            border-radius: 4px;
-            cursor: pointer;
-            background: #e60181 none;
-            block-size: 48px;
-            font-size: 16px;
-            line-height: 20px;
-            align-items: center;
-            box-sizing: border-box;
-            color: white;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            font-weight: 500;
-            justify-content: center;
-            min-inline-size: 100%;
-            outline: none;
-            position: relative;
-            text-decoration: none;
-            transition: all 0.16s ease;
-            user-select: none;
-        }
-
-        .button-module_button:hover {
-            background: white;
-            color: black;
-            border: 1px solid #e60181;
-            transform: scale(1.02);
-        }
-
-        .button-module_button:active {
-            background: white;
-            color: black;
-            border: 1px solid #e60181;
-            transform: scale(0.98);
-        }
-
-        .extra-module_buttons {
-            grid-area: 2 / 1 / 3 / 5;
-            display: flex;
-            flex-wrap: wrap;
-            inline-size: 100%;
-            justify-content: space-between;
-            padding: 10px;
-        }
-
-        .extra-module_booktype {
-            flex-grow: 1;
-            line-height: 18px;
-        }
-
-        .radiogroup-module {
-            display: inline-flex;
-            position: absolute;
-            top: 45%;
-        }
-
-        .radiogroup-module_container-qqjqz {
-            display: inline-block;
-            vertical-align: baseline;
-        }
-
-        .inputradio-module_label {
-            line-height: 16px;
-            margin-inline-end: 20px;
-            cursor: pointer;
-        }
-
-        .inputradio-module_container-23qtz {
-            padding: 3px 0;
-            align-items: center;
-            display: flex;
-        }
-
-        .inputradio-module_input-60s40 {
-            position: absolute;
-            clip: rect(0 0 0 0);
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-            border: 0;
-            padding: 0;
-            margin: -1px;
-        }
-
-        .inputradio-module_icon-crpv0 {
-            background-color: white;
-            border: solid 1px lightgrey;
-            border-radius: 100%;
-            width: 16px;
-            height: 16px;
-            box-sizing: border-box;
-            display: block;
-            flex-shrink: 0;
-            position: relative;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .inputradio-module_text-1avj1 {
-            display: inline-block;
-            margin-inline-start: 8px;
-        }
-
-        .inputradio-module_input-60s40:checked + .inputradio-module_icon-crpv0 {
-            border: solid 3px #e60181;
-            box-shadow: 0 0 0 2px rgba(230, 1, 129, 0.68);
-        }
-
-        .inputradio-module_label:hover .inputradio-module_icon-crpv0 {
-            border-color: white;
-        }
-
-        /* Скрыть плашку */
-        .hidden {
-            display: none;
-        }
-
-        .guest-hidden {
-            visibility: visible;
-        }
-
-        /* Плашка */
-        #guest-popup {
-            display: none;
-            background: white;
-            border: 1px solid lightgray;
-            border-radius: 4px;
-            padding: 10px;
-            box-shadow: 0 4px 8px gray;
-            z-index: 1000;
-            /*margin-top: 10px;*/
-            width: 70%; /* Ширина плашки равна ширине родительского элемента */
-            box-sizing: border-box;
-            position: absolute;
-        }
-
-        /* Элементы плашки */
-
-        #guest-popup div {
-            margin-bottom: 10px;
-        }
-
-        /* Кнопки */
-
-        .guest-popup_buttons-wrapper {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            grid-column-gap: 10px;
-        }
-
-        .guest-popup_buttons, .remove-child {
-            padding: 5px 10px;
-            background: #e60181;
-            color: white;
-            border: 1px solid #e60181;
-            border-radius: 4px;
-            cursor: pointer;
-            transition-duration: 0.1s;
-        }
-
-        .guest-popup_buttons:hover {
-            background: white;
-            color: black;
-            border: 1px solid #e60181;
-            transform: scale(1.02);
-        }
-
-        .guest-popup_buttons:active {
-            background: white;
-            color: black;
-            border: 1px solid #e60181;
-            transform: scale(0.98);
-        }
-
-        #guest-popup {
-            transform: translateY(37px); /* Смещение ниже родительского поля */
-        }
-
-        .popup_widget {
-            display: none;
-            position: absolute;
-            box-sizing: border-box;
-            line-height: 18px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            border: 1px solid #e60181;
-            border-radius: 8px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            max-width: 480px;
-            min-width: 300px;
-            width: 100%;
-        }
-
-        .popup_widget.active {
-            display: block;
-        }
-
-        .popup-module_wrapper {
-            padding: 20px 40px 0 20px;
-
-        }
-
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-            color: #e60181;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 12px;
-            font-weight: 500;
-            color: #e60181;
-            margin-bottom: 5px;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #e60181;
-            border-radius: 4px;
-            font-size: 14px;
-            color: black;
-        }
-
-        .button-wrapper {
-            margin: 20px;
-        }
-
-        .button-module_button {
-            background: #e60181;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        .button-module_button:hover {
-            background: white;
-            color: #e60181;
-            border: 1px solid #e60181;
-        }
-
-        .contact {
-            padding: 10px;
-            font-size: 16px;
-            width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            outline: none;
-        }
-
-        @media (max-width: 768px) {
-            .booking-widget {
-                width: 90vw;
-                height: auto;
-            }
-
-            .booking-module_wrapper {
-                display: flex;
-                flex-direction: column;
-                gap: 0;
-                padding-right: 20px;
-            }
-
-            .booking-module_datepick,
-            .booking-module_guests,
-            .extra-module_buttons,
-            .booking-module_submit {
-                grid-area: auto;
-                width: 100%;
-            }
-
-            .button-module_button {
-                width: 100%;
-                font-size: 16px;
-            }
-
-            .radiogroup-module {
-                position: absolute;
-                top: 60%;
-            }
-
-            .guest-hidden {
-                visibility: hidden;
-            }
-
-            #guest-popup {
-                width: 45%;
-            }
-
-            .popup_widget {
-                width: 100%;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .booking-widget {
-                width: 100vw;
-                height: auto;
-            }
-
-            .input-module_label-1p3o1 {
-                padding: 3px 5px;
-            }
-
-            .button-module_button {
-                font-size: 14px;
-                padding: 8px;
-                width: 100%;
-            }
-
-            .radiogroup-module {
-                position: absolute;
-                top: 60%;
-            }
-
-            .guest-hidden {
-                visibility: hidden;
-            }
-
-            #guest-popup {
-                width: 100%;
-            }
-
-            .popup_widget {
-                width: 100%;
-                padding: 10px;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-
-            .form-group input {
-                font-size: 12px;
-            }
-
-            .popup-module_wrapper {
-                padding: 5px 25px 0 5px;
-            }
-
-            .button-wrapper {
-                margin: 5px;
-            }
-        }
-
-        @media (max-width: 306px) {
-            .booking-widget {
-                width: 100vw;
-                height: auto;
-            }
-
-            .button-module_content {
-                padding: 0;
-            }
-
-            .button-module_button {
-                padding: 0;
-            }
-
-            .radiogroup-module {
-                position: absolute;
-                top: 60%;
-            }
-        }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-start-start-radius: 4px;
+    box-sizing: border-box;
+    line-height: 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px 0 gray;
+    padding: 10px;
+    width: 90vw;
+    height: auto;
+    max-width: 900px;
+    z-index: 1;
+}
+
+.module-control-glacb {
+    margin: 10px;
+    flex-grow: 1;
+}
+
+.booking-module_wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.booking-module_datepick {
+    grid-area: 1 / 1 / 1 / 3;
+    z-index: 1;
+}
+
+.click-outside {
+    display: block;
+    unicode-bidi: isolate;
+    cursor: pointer;
+}
+
+.input-module_wrapper-2q9rr {
+    inline-size: 100%;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.input-module_label-1p3o1 {
+    padding: 3px 11px 5px;
+    block-size: 48px;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: column-reverse;
+    overflow: visible;
+    position: relative;
+    transition: border-color 0.16s ease, box-shadow 0.16s ease;
+    background-color: white;
+    border: 1px solid #e60181;
+    border-radius: 4px;
+}
+
+.input-module_controlline-2dq2p, .datepicker {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.input-module_control-tqfen {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 500;
+    inline-size: 100%;
+    line-height: 20px;
+    outline: 0;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.input-module_icon-j1n8u, .input-button {
+    pointer-events: auto;
+    display: none;
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+.check-in:focus ~ .input-button,
+.check-in:not(:placeholder-shown) ~ .input-button {
+    display: block;
+}
+
+.input-button img {
+    height: 18px;
+    width: 18px;
+    padding-right: 1px;
+}
+
+.input-module_titleWrapper-2jssx {
+    align-items: center;
+    display: inline-flex;
+    max-inline-size: 100%;
+}
+
+.input-module_title-svj1h {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    margin-block-end: 2px;
+    color: #e60181;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.input-module_title-checkinout {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    margin-block-end: 2px;
+    top: 2px;
+    color: #e60181;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.booking-module_guests {
+    position: relative;
+    grid-area: 1 / 3 / 2 / 5;
+}
+
+.input-module_wrapper-2q9rr {
+    display: inline-flex;
+    flex-direction: column;
+    inline-size: 100%;
+    cursor: pointer;
+}
+
+.input-module_controlline-2dq2p {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.input-module_icon-j1n8u {
+    display: flex;
+    pointer-events: none;
+}
+
+.Guests-module__arrowDown--1jS3N, .datepick-module_icon {
+    opacity: 0.6;
+}
+
+.booking-module_submit {
+    grid-area: 3 / 1 / 4 / 5;
+    margin: 10px;
+    order: 1;
+}
+
+.button-module_button {
+    margin-right: 10px;
+    padding: 0 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #e60181 none;
+    block-size: 48px;
+    font-size: 16px;
+    line-height: 20px;
+    align-items: center;
+    box-sizing: border-box;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 500;
+    justify-content: center;
+    min-inline-size: 100%;
+    outline: none;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.16s ease;
+    user-select: none;
+}
+
+.button-module_button:hover {
+    background: white;
+    color: black;
+    border: 1px solid #e60181;
+    transform: scale(1.02);
+}
+
+.button-module_button:active {
+    background: white;
+    color: black;
+    border: 1px solid #e60181;
+    transform: scale(0.98);
+}
+
+.extra-module_buttons {
+    grid-area: 2 / 1 / 3 / 5;
+    display: flex;
+    flex-wrap: wrap;
+    inline-size: 100%;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.extra-module_booktype {
+    flex-grow: 1;
+    line-height: 18px;
+}
+
+.radiogroup-module {
+    display: inline-flex;
+    position: absolute;
+    top: 45%;
+}
+
+.radiogroup-module_container-qqjqz {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.inputradio-module_label {
+    line-height: 16px;
+    margin-inline-end: 20px;
+    cursor: pointer;
+}
+
+.inputradio-module_container-23qtz {
+    padding: 3px 0;
+    align-items: center;
+    display: flex;
+}
+
+.inputradio-module_input-60s40 {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+}
+
+.inputradio-module_icon-crpv0 {
+    background-color: white;
+    border: solid 1px lightgrey;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    display: block;
+    flex-shrink: 0;
+    position: relative;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputradio-module_text-1avj1 {
+    display: inline-block;
+    margin-inline-start: 8px;
+}
+
+.inputradio-module_input-60s40:checked + .inputradio-module_icon-crpv0 {
+    border: solid 3px #e60181;
+    box-shadow: 0 0 0 2px rgba(230, 1, 129, 0.68);
+}
+
+.inputradio-module_label:hover .inputradio-module_icon-crpv0 {
+    border-color: white;
+}
+
+/* Скрыть плашку */
+.hidden {
+    display: none;
+}
+
+.guest-hidden {
+    visibility: visible;
+}
+
+/* Плашка */
+#guest-popup {
+    display: none;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 4px 8px gray;
+    z-index: 1000;
+    /*margin-top: 10px;*/
+    width: 70%; /* Ширина плашки равна ширине родительского элемента */
+    box-sizing: border-box;
+    position: absolute;
+}
+
+/* Элементы плашки */
+
+#guest-popup div {
+    margin-bottom: 10px;
+}
+
+/* Кнопки */
+
+.guest-popup_buttons-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 10px;
+}
+
+.guest-popup_buttons, .remove-child {
+    padding: 5px 10px;
+    background: #e60181;
+    color: white;
+    border: 1px solid #e60181;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+
+.guest-popup_buttons:hover {
+    background: white;
+    color: black;
+    border: 1px solid #e60181;
+    transform: scale(1.02);
+}
+
+.guest-popup_buttons:active {
+    background: white;
+    color: black;
+    border: 1px solid #e60181;
+    transform: scale(0.98);
+}
+
+#guest-popup {
+    transform: translateY(37px); /* Смещение ниже родительского поля */
+}
+
+.popup_widget {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    line-height: 18px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #e60181;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 480px;
+    min-width: 300px;
+    width: 100%;
+}
+
+.popup_widget.active {
+    display: block;
+}
+
+.popup-module_wrapper {
+    padding: 20px 40px 0 20px;
+
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #e60181;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #e60181;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e60181;
+    border-radius: 4px;
+    font-size: 14px;
+    color: black;
+}
+
+.button-wrapper {
+    margin: 20px;
+}
+
+.button-module_button {
+    background: #e60181;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.button-module_button:hover {
+    background: white;
+    color: #e60181;
+    border: 1px solid #e60181;
+}
+
+.contact {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .booking-widget {
+        width: 90vw;
+        height: auto;
+    }
+
+    .booking-module_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding-right: 20px;
+    }
+
+    .booking-module_datepick,
+    .booking-module_guests,
+    .extra-module_buttons,
+    .booking-module_submit {
+        grid-area: auto;
+        width: 100%;
+    }
+
+    .button-module_button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .radiogroup-module {
+        position: absolute;
+        top: 60%;
+    }
+
+    .guest-hidden {
+        visibility: hidden;
+    }
+
+    #guest-popup {
+        width: 45%;
+    }
+
+    .popup_widget {
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-widget {
+        width: 100vw;
+        height: auto;
+    }
+
+    .input-module_label-1p3o1 {
+        padding: 3px 5px;
+    }
+
+    .button-module_button {
+        font-size: 14px;
+        padding: 8px;
+        width: 100%;
+    }
+
+    .radiogroup-module {
+        position: absolute;
+        top: 60%;
+    }
+
+    .guest-hidden {
+        visibility: hidden;
+    }
+
+    #guest-popup {
+        width: 100%;
+    }
+
+    .popup_widget {
+        width: 100%;
+        padding: 10px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .form-group input {
+        font-size: 12px;
+    }
+
+    .popup-module_wrapper {
+        padding: 5px 25px 0 5px;
+    }
+
+    .button-wrapper {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 306px) {
+    .booking-widget {
+        width: 100vw;
+        height: auto;
+    }
+
+    .button-module_content {
+        padding: 0;
+    }
+
+    .button-module_button {
+        padding: 0;
+    }
+
+    .radiogroup-module {
+        position: absolute;
+        top: 60%;
+    }
+}
