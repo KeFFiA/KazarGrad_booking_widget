@@ -324,11 +324,9 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
       }
     }
-    const baseUrl = 'http://127.0.0.1:8000'
+    const baseUrl = 'https://kazar.the-crew-rzn.ru'
     const codeRequest = await fetch(baseUrl + '/api/v1/secretcode', {
       method: 'GET',
-      // mode: 'no-cors',
-      // headers: {'tuna-skip-browser-warning': '1'}
     });
     const codeData = await codeRequest.json();
     const {code, state} = codeData
