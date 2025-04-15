@@ -325,7 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     const baseUrl = 'https://kazar.the-crew-rzn.ru'
-    const codeRequest = await fetch(baseUrl + '/api/v1/secretcode', {
+    const codeRequest = await fetch(baseUrl + '/api/v1/utils/secretcode', {
       method: 'GET',
     });
     const codeData = await codeRequest.json();
