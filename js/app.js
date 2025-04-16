@@ -345,9 +345,8 @@ document.addEventListener("DOMContentLoaded", () => {
             type: radioValue
         };
 
-        closeButton.addEventListener("click", () => {
-            popupWidget.classList.remove("active");
-        });
+        popupWidget.classList.remove("active");
+
         await fetch(baseUrl + '/api/v1/booking/create',
             {
                 method: 'POST',
