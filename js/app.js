@@ -344,9 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
             child2: parseInt(child_2),
             type: radioValue
         };
-
         popupWidget.classList.remove("active");
-
         await fetch(baseUrl + '/api/v1/booking/create',
             {
                 method: 'POST',
