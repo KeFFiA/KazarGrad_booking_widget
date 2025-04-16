@@ -344,6 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
             child2: parseInt(child_2),
             type: radioValue
         };
+
         closeButton.addEventListener("click", () => {
             popupWidget.classList.remove("active");
         });
