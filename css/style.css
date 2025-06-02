@@ -443,6 +443,66 @@ body {
     outline: none;
 }
 
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #e60181;
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+    background-color: #e60181;
+    border-color: #e60181;
+}
+
+.checkbox-container input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.checkbox-container input[type="checkbox"]:checked::after {
+    opacity: 1;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: black;
+}
+
+.checkbox-container a.checkbox-label {
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.checkbox-container a.checkbox-label:hover {
+    text-decoration: underline;
+    color: #e60181;
+}
+
 @media (max-width: 768px) {
     .booking-widget {
         width: 90vw;
