@@ -454,11 +454,12 @@ body {
 .checkbox-container input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
-    width: 16px;
-    height: 16px;
+    width: 10px;
+    height: 10px;
     border: 2px solid #e60181;
     border-radius: 4px;
     margin-right: 10px;
+    top: 7px;
     position: relative;
     cursor: pointer;
     transition: background-color 0.2s, border-color 0.2s;
