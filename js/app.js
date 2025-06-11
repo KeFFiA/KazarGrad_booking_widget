@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const DateTime = easepick.DateTime;
     const bookedDates = [
-        //     Заполнить из массива
+        ['2025-06-13', '2025-08-25']
     ].map(d => {
         if (d instanceof Array) {
             const start = new DateTime(d[0], 'YYYY-MM-DD');
